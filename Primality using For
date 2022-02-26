@@ -1,0 +1,26 @@
+# Prime Numbers Check using For Loop
+
+
+n= int (input("Enter the number "))
+f=0
+for i in range (2,n):
+    if n%i==0:
+        f=1
+if f==0:
+    print("Prime")
+if f==1:
+    print("Not Prime")
+    
+    
+# Sample Input:
+#     Enter the number 71
+# Sample Output:
+#     Prime
+    
+    
+# Sample Input:
+#     Enter the number 81
+    
+# Sample Output:
+#     Not Prime
+    
