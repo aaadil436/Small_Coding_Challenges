@@ -1,0 +1,28 @@
+# List of Fibonacci numbers upto n
+
+n= int (input("Enter a Number "))
+lst=[]
+i=2
+
+while(i<=n):
+    m=2
+    counter=0
+    
+    while(m<i):
+        if i%m ==0:
+            counter=1
+            break
+        m=m+1
+    if counter == 0:
+        lst.append(i)
+    i=i+1
+    
+        
+print(lst)
+
+
+# Sample Input:
+#     Enter a Number 90
+# Sample Output:
+#     [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89]
+    
