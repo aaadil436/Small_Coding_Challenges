@@ -1,0 +1,22 @@
+# Prime Numbers List using For Loop
+
+n= int (input("Enter the number "))
+lst=[]
+
+for i in range(2,n+1):
+    num=i
+    f=0
+    for x in range (2,num):
+        if num%x==0:
+            f=1
+    if f==0:
+        lst.append(num)
+
+        
+print(lst)
+
+# Sample Input:
+#     Enter the number 99
+    
+# Sample Output:
+#     [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
