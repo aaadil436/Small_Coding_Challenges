@@ -45,3 +45,41 @@ if __name__=='__main__':
 # #Sample Output:
 #     RENWO STI MA I DNA, KOOB A SI, SIHT.
     
+    
+    
+
+# Reverses the order of an array
+def reverse_array(a):
+    lst=[]
+    i= len(a)-1
+    x=0
+    while i<len(a):
+        lst.append(a[i])
+      
+        i=i-1
+        if i==-1:
+            break
+    return lst
+
+if __name__=='__main__': 
+    lst1= []
+    n= int(input("Enter the number of elements of array "))
+    for i in range(n):
+        num= int (input("Enter the numbers one after the other "))
+        lst1.append(num)
+    print("The given array was ", lst1)
+    print("The reverse order is ", reverse_array(lst1))
+
+
+    
+#  Sample Input:
+# Enter the number of elements of array 4
+# Enter the numbers one after the other 9
+# Enter the numbers one after the other 8
+# Enter the numbers one after the other 7
+# Enter the numbers one after the other 6
+    
+    
+# Sample Output:
+#     The given array was  [9, 8, 7, 6]
+#     The reverse order is  [6, 7, 8, 9]
