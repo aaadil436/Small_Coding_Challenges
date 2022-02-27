@@ -56,3 +56,22 @@ else:
     
 # # Sample Output:
 #     No Luck
+
+
+
+
+
+# Nth Fibonacci Number
+n=int(input())
+lst=[0,1]
+x=0
+for i in range(n+1):
+    x= lst[i] + lst[i+1]
+    lst.append(x)
+print(lst[n])
+
+#Sample Input:
+#     100
+    
+#Sample Output:
+#     354224848179261915075
