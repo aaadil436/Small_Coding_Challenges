@@ -1,0 +1,122 @@
+
+# Takes an Integer N and prints its reverse while ignoring the 0s at the start
+n=int(input())
+rev= 0
+
+if n<=9 and n>0:
+    print(n)
+
+while n>=10:
+    a=n%10
+    rev=(rev*10) + a
+    n=(n-a)/10
+    
+    if n<=9:
+        rev=(rev*10)+n
+        rev= int(rev)
+        print(rev)
+        break
+    
+ 
+
+#Sample Input:
+#     10000
+
+#Sample Output:
+#         1
+
+#Sample Input:
+#         123987
+
+#Sample Output:
+#         789321
+
+
+
+
+#Check if the number is Palindrome or not
+
+
+def checkPalindrome(n):
+    rev= 0
+    check=n
+
+    if n<=9 and n>=0:
+        print(n)
+        rev=n
+
+    while n>=10:
+        a=n%10
+        rev=(rev*10) + a
+        n=(n-a)/10
+    
+        if n<=9:
+            rev=(rev*10)+n
+            rev= int(rev)
+           
+            break
+    if check==rev:
+        return True
+
+num = int(input())
+isPalindrome = checkPalindrome(num)
+if(isPalindrome):
+    print('true')
+else:
+    print('false')
+    
+    
+# Sample Input:
+#     12345
+# Sample Output:
+#     false
+    
+# Sample Input:
+#     990099
+# Sample Output:
+#     true
+
+
+
+
+#Program to input an integer N and print the sum of all its even digits and sum of all its odd digits separately
+
+N= int (input())
+
+
+sumE=0
+sumO=0
+
+if N<=9:
+    if N%2==0:
+        sumE=sumE+N
+    else:
+        sumO=sumO+N
+    print(sumE," ",sumO)
+
+while N>=10:
+    a=N%10
+    if a%2==0:
+        sumE=sumE+a
+    else:
+        sumO=sumO+a
+    
+    N=(N-a)/10
+    
+    if N<10:
+        if N%2==0:
+            sumE=sumE+N
+        else:
+            sumO=sumO+N
+   
+sumE= int (sumE)
+sumO= int (sumO)
+print(sumE," ",sumO)
+
+   
+
+    
+# #Sample Input:
+#     112233
+# #Sample Output:
+#     4  8
