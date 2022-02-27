@@ -26,3 +26,33 @@ print(lst)
 # Sample Output:
 #     [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89]
     
+
+
+# Is the number a member of a Fibbonacci
+
+n= int (input("Please Enter the number "))
+lst=[0,1]
+x=0
+for i in range(n):
+    x= lst[i] + lst[i+1]
+    lst.append(x)
+if n in lst:
+    print("True")
+else:
+    print("No Luck")
+    
+    
+    
+# # Sample Input:
+# #     Please Enter the number 121393
+    
+# # Sample Output:  
+# #     True
+    
+    
+# # Sample Input:
+#     Please Enter the number 123
+
+    
+# # Sample Output:
+#     No Luck
