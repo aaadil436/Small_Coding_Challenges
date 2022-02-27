@@ -1,0 +1,47 @@
+
+# This Program will take a string input and will reverse the order of each word and will capitalise and place the punctuations accordingly.
+
+
+
+def reverse_and_cap(n):
+
+
+   
+    n=n.upper()
+    lst=n.split()
+    finallst=[]
+
+    for words in lst:
+        words=words[::-1]
+        if "." in words:
+            words=words.replace(".", "")
+#             words= words + "."
+
+        
+        if "," in words:
+            words= words.replace(",", "")
+            words= words + ","
+        
+
+        finallst.append(words)
+#     print(finallst)
+#     result= " " .join(finallst)
+#     print(result)
+    finallst.reverse()
+    output= " " .join(finallst)
+    output= output + "."
+    
+    print(output)
+    
+    
+if __name__=='__main__':
+        x=input("Enter the string You want to reverse and Capitalise :")
+        reverse_and_cap(x)
+        
+
+    
+# #Sample Input: 
+#     Enter the string You want to reverse and Capitalise :This is, a book and, I am its owner.
+# #Sample Output:
+#     RENWO STI MA I DNA, KOOB A SI, SIHT.
+    
