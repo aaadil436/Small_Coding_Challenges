@@ -57,5 +57,41 @@ if __name__=='__main__':
 # Sample Input: 666   
 # Sample Output: False
         
+        
+        
+        
+        
     
     
+ # Fahrenheit to Celsius Calculator
+
+def printTable(start,end,step):
+    x=0
+
+    for i in range(start, end+1, step):
+        x=(i-32) * 5/9
+        x=int(x)
+        print(i, " ",   x)
+        
+        
+
+  
+s = int(input())
+e = int(input())
+step = int(input())
+printTable(s,e,step)
+
+# Sample Input:
+#         0
+#         100
+#         20
+
+# Sample Output:
+
+#     0   -17
+#     20   -6
+#     40   4
+#     60   15
+#     80   26
+#     100   37
+
