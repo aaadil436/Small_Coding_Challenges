@@ -1,7 +1,7 @@
 # List of Fibonacci numbers upto n
 
 n= int (input("Enter a Number "))
-lst=[]
+lst=[0,1, 1]
 i=2
 
 while(i<=n):
