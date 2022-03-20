@@ -1,0 +1,190 @@
+
+#Factorial function using Recursion
+
+def factorial(x):
+    # Base Case
+    if x==0:
+        return 1
+    #Recursive Hypothesis
+    output=factorial(x-1)
+    #Recursive Step
+    return x*factorial(x-1)
+n=int(input("Enter the number you want to calculate the factorial of: "))
+print(factorial(n))
+
+
+
+# Sample Input:
+# Enter the number you want to calculate the factorial of: 5
+# Sample Output:
+# 120
+
+
+
+# Power Function
+def powerf(x,y):
+    #Base Case
+    if y==0:
+        return 1
+    #Recursion Hypothesis
+    output=powerf(x,y-1)
+    #Recursion Step
+    return x*output
+n=int(input("Enter the Number: "))
+p=int(input("Raised to the Power "))
+print("The answer is: ", powerf(n,p))
+    
+    
+# Test Run    
+# Enter the Number: 5
+# Raised to the Power 4
+# The answer is:  625
+
+
+# Sum of an Array using Recursion
+def sumArray(arr):
+    if len(arr)==1:
+        return arr[len(arr)-1]
+    output=sumArray(arr[1:])
+    return arr[0]+output
+x=list(int(i) for i in input().strip().split(" "))
+print(sumArray(x))
+
+
+
+# Sample Input
+# 3 4 5 6
+# Sample Output
+# 18
+
+
+
+# Check if the Number is present in an array or not using Recursion
+
+def isPresent(arr,x):
+    if len(arr)==0:
+        return False
+    if arr[0]==x:
+        return True
+    else:
+        return isPresent(arr[1:], x)
+
+
+from sys import setrecursionlimit
+setrecursionlimit(11000)
+arr=list(int(i) for i in input().strip().split(' '))
+x=int(input())
+if isPresent(arr, x):
+    print('true')
+else:
+    print('false')
+
+        
+# Test Run    
+    
+# 7 8 9 3 2 19 21
+# 55
+# false
+
+
+# 7 8 9 3 2 19 21
+# 3
+# true
+
+
+
+# Finding the first index of a given number using slicing
+def firstIndex(arr, x):
+    a=len(arr)
+    if a==0:
+        return -1
+    if arr[0]==x:
+        return 0
+    output=firstIndex(arr[1:], x)
+    if output==-1:
+        return -1
+    else:
+        return output + 1
+    
+from sys import setrecursionlimit
+setrecursionlimit(11000)
+
+arr=list(int(i) for i in input(" Enter the Numbers: ").strip().split(' '))
+x=int(input(" Enter the number you find the index for "))
+print("The Index is :" ,firstIndex(arr, x))
+if firstIndex(arr, x)==-1:
+    print("Number not Present ")
+
+
+# Test Run
+#  Enter the Numbers: 1 5 3 7 9 3
+#  Enter the number you find the index for 3
+#  The Index is : 2
+
+
+# Enter the Numbers: 1 5 3 7 9 3
+# Enter the number you find the index for 10
+# Number not Present
+
+
+
+# Finding the first index of a given number using indexing
+
+def firstIndex(arr, x, si):
+    if si==len(arr):
+        return -1
+    if arr[si]==x:
+        return si
+    return firstIndex(arr,x , si+1)
+from sys import setrecursionlimit
+setrecursionlimit(11000)
+
+arr=list(int(i) for i in input(" Enter the numbers: ").strip().split(' '))
+x=int(input("Enter the number you are interested in "))
+print("The first index is: ", firstIndex(arr, x,0))
+if firstIndex(arr,x,0)==-1:
+    print("Number not Present ")
+    
+
+    
+#Test Run
+# Enter the numbers: 7 3 5 6 8 4 
+# Enter the number you are interested in 8
+# The first index is:  4
+
+
+#  Enter the numbers: 7 3 5 6 8 4 
+# Enter the number you are interested in 9
+# Number not Present 
+
+
+# Finding Last Index of a number using Slicing
+
+def lastIndex(arr, x):
+    if len(arr)==0:
+        return -1
+    if arr[len(arr)-1]==x:
+        return len(arr)-1
+    else:
+        return lastIndex(arr[:len(arr)-1],x)
+from sys import setrecursionlimit
+setrecursionlimit(11000)
+
+arr=list(int(i) for i in input(" Enter the numbers: ").strip().split(' '))
+x=int(input("Enter the number you are interested in "))
+
+if lastIndex(arr,x)==-1:
+    print("Number not Present ")  
+else:
+    print("The first index is: ", lastIndex(arr, x))
+    
+    
+# Test Run
+# Enter the numbers: 1 5 3 8 7 9 3
+# Enter the number you are interested in 3
+# The first index is:  6
+
+
+# Enter the numbers: 1 5 3 8 3 9 7 3
+# Enter the number you are interested in 10
+# Number not Present 
